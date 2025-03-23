@@ -25,7 +25,7 @@ export default function Home() {
     ]
 
     const techStack = ["Typescript", "JavaScript", "Git", "Next.js", "Node.js", "Express.js",
-    "Python", "HTML", "CSS", "Tailwind", "SQL", "PostgreSQL", "MongoDB","React"
+    "Python", "HTML", "CSS", "Tailwind", "SQL", "PostgreSQL", "MongoDB","React","FastAPI","Golang"
     ];
 
     const projects = [
@@ -34,6 +34,12 @@ export default function Home() {
             description:"Mekdim is a comprehensive software enterprise project designed to create a feature-rich school portal, encompassing functionalities such as student grade tracking, course registration, and other essential administrative and academic tools.",
             logo:"mekdim.png",
             link:"https://github.com/NathanZK/Mekdim"
+        },
+        {
+            title: "Simple Bookmark Manager",
+            description:"This project showcases a beautifully crafted, responsive landing page designed to promote a browser bookmark manager extension. It prioritizes a clean, modern aesthetic and user-friendly interface to effectively communicate the extension's value. The design seamlessly adapts to various screen sizes, ensuring an optimal viewing experience across desktops, tablets, and mobile devices.\n",
+            logo:"logo-bookmark.svg",
+            link:"https://github.com/MilkiyasGebru/Landing-Page"
         }
     ];
 
@@ -44,8 +50,8 @@ export default function Home() {
 
       <div className="w-5/6 m-auto">
 
-          <div className="flex">
-              <div>
+          <div className="flex flex-col-reverse items-center md:flex-row">
+              <div className="w-4/5">
                 <p className="text-4xl mb-3.5">About Me</p>
                 <p className="text-4xl mb-3.5">I ❤️ to build things</p>
                 <p className="text-lg font-light">
@@ -56,13 +62,16 @@ export default function Home() {
                   JavaScript, Node.js, and React.js, and to pursue opportunities to grow.
                 </p>
               </div>
-              <Image
-              src="/Miki Profile Picture.jpg"
-              alt="Miki Profile Picture"
-              width={250}
-              height={250}
-              className="border border-gray-100 shadow-2xl rounded-lg"
-              />
+              <div className="w-3/5 lg:w-1/5 p-2">
+                  <Image
+                      src="/Miki Profile Picture.jpg"
+                      alt="Miki Profile Picture"
+                      width={200}
+                      height={200}
+                      className="border border-gray-100 shadow-2xl rounded-lg w-full h-full"
+                  />
+
+              </div>
 
            </div>
 
@@ -70,9 +79,8 @@ export default function Home() {
           <a href="/MILKIYAS-GEBRU-RESUME.pdf" className="underline font-medium" download="cv.pdf">Download Resume</a>
 
 
-          <p className="text-lg font-bold mt-4">Details</p>
 
-          <div className="flex gap-8 w-full">
+          <div className="flex gap-8 mt-8 w-full flex-col-reverse lg:flex-row">
 
               <div className="w-2/3 flex-wrap">
 
@@ -100,9 +108,9 @@ export default function Home() {
               </div>
           </div>
 
-          <p className="font-bold text-xl mb-3">Projects</p>
+          <p className="font-bold text-xl my-4">Projects</p>
 
-          <div className="flex gap-4">
+          <div className="flex flex-col  md:flex-row gap-4 mb-4 items-center">
               {projects.map((item,index)=>(<ProjectDetail project={item} key={index}/>))}
           </div>
 
