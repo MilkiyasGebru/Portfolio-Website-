@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 export default function ProjectDetail(props) {
     const {project} = props;
     return (
@@ -17,8 +18,11 @@ export default function ProjectDetail(props) {
             <p className="my-3 text-center font-semibold text-2xl">{project.title}</p>
 
             <p className="mb-3 font-light text-sm">{project.description}</p>
+            <div className="self-start flex gap-4">
+                <Link href={project.link} className="underline font-semibold mt-2 self-start">Github Link</Link>
+                {project.website !== "" && <Link href={project.website} className="underline font-semibold mt-2 self-start">Website Link</Link>}
+            </div>
 
-            <a href={project.link} className="underline font-semibold mt-2 self-start">Github Link</a>
 
         </div>
     )
