@@ -33,13 +33,15 @@ export default function Home() {
             title: "Mekdim Project",
             description:"Mekdim is a comprehensive software enterprise project designed to create a feature-rich school portal, encompassing functionalities such as student grade tracking, course registration, and other essential administrative and academic tools.",
             logo:"mekdim.png",
-            link:"https://github.com/NathanZK/Mekdim"
+            link:"https://github.com/NathanZK/Mekdim",
+            website:""
         },
         {
             title: "Simple Bookmark Manager",
             description:"This project showcases a beautifully crafted, responsive landing page designed to promote a browser bookmark manager extension. It prioritizes a clean, modern aesthetic and user-friendly interface to effectively communicate the extension's value. The design seamlessly adapts to various screen sizes, ensuring an optimal viewing experience across desktops, tablets, and mobile devices.\n",
             logo:"logo-bookmark.svg",
-            link:"https://github.com/MilkiyasGebru/Landing-Page"
+            link:"https://github.com/MilkiyasGebru/Landing-Page",
+            website:"https://milkiyasgebru.github.io/Landing-Page/"
         }
     ];
 
@@ -108,7 +110,7 @@ export default function Home() {
               </div>
           </div>
 
-          <p className="font-bold text-xl my-4">Projects</p>
+          <p className="font-bold text-xl my-4" id="Projects">Projects</p>
 
           <div className="flex flex-col  md:flex-row gap-4 mb-4 items-center">
               {projects.map((item,index)=>(<ProjectDetail project={item} key={index}/>))}
