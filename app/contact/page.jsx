@@ -22,7 +22,7 @@ export default function ContactPage(){
                 <input type="email" className="border py-2 px-4 rounded-md w-1/2" placeholder="Your Email"/>
                 <p className="font-semibold">Message</p>
                 <textarea name="" id="" cols="20" rows="10" className="border rounded-md p-4  outline-none resize-none" placeholder="Hi There" value="" onChange={()=>console.log("HI")}></textarea>
-                <button className=" border rounded-md bg-white w-1/6 px-3 py-2 font-semibold">
+                <button className="border rounded-md bg-white w-1/6 px-3 py-2 font-semibold w-fit">
                     <div className="flex gap-4 items-center">
                         <p>Send</p>
                         <FontAwesomeIcon icon={faPaperPlane} />
