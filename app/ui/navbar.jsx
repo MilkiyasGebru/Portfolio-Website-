@@ -12,7 +12,7 @@ export default function Navbar(){
             </div>
             <div className="flex gap-2 ">
                 <div className=" p-2 border border-gray-200 rounded-md hover:cursor-pointer hover:font-bold ">
-                    <Link href="#Projects">Projects</Link>
+                    <Link href="/#Projects">Projects</Link>
 
                 </div>
                 <div className=" p-2 border border-gray-200 rounded-md  ">
