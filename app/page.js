@@ -13,7 +13,8 @@ export default function Home() {
             company: "Africa to Silicon Valley",
             date: "Mar 2023 - Feb 2025",
             duration:"1 year 10 months",
-            description:"I developed automation scripts using Apps Script and Python to streamline student progress tracking across various learning platforms, significantly reducing the process from hours to mere minutes.  Additionally, I trained over 30 backend development students in GoLang and clean architecture principles, and delivered more than 10 comprehensive lessons on data structures and algorithms to another group of 30+ students."
+            description:"I developed automation scripts using Apps Script and Python to streamline student progress tracking across various learning platforms, significantly reducing the process from hours to mere minutes.  Additionally, I trained over 30 backend development students in GoLang and clean architecture principles, and delivered more than 10 comprehensive lessons on data structures and algorithms to another group of 30+ students.",
+            images: ["/python.png","/Golang.png"]
         },
         {
             logo: "holistic.png",
@@ -21,6 +22,7 @@ export default function Home() {
             company: "Holistic Technologies",
             date: "Oct 2023 - Feb 2025",
             duration:"1 year 5 months",
+            images:["/python.png", "/selenium.png"],
             description: "I automated Instagram and Threads posts using Selenium, developed a system to automate WordPress article publishing via CRON jobs, managed and maintained their VPS server, implemented the entire frontend for the company blog, and integrated a Stripe payment system for secure and efficient transaction processing on the blog website."
         }
     ]
@@ -40,7 +42,7 @@ export default function Home() {
         },
         {
             title: "Simple Bookmark Manager",
-            description:"This project showcases a beautifully crafted, responsive landing page designed to promote a browser bookmark manager extension. It prioritizes a clean, modern aesthetic and user-friendly interface to effectively communicate the extension's value. The design seamlessly adapts to various screen sizes, ensuring an optimal viewing experience across desktops, tablets, and mobile devices.\n",
+            description:"This project showcases a beautifully crafted, responsive landing page designed to promote a browser bookmark manager extension. It prioritizes a clean, modern aesthetic and user-friendly interface to effectively communicate the extension's value.",
             logo:"logo-bookmark.svg",
             link:"https://github.com/MilkiyasGebru/Landing-Page",
             website:"https://milkiyasgebru.github.io/Landing-Page/",
@@ -54,18 +56,24 @@ export default function Home() {
             presentation_link:"https://www.youtube.com/watch?v=RRyJ8oesyJU",
             website:""
 
+        },
+        {title: "RateEat",description:"RateEat is a platform specifically designed for Ethiopia, connecting diners with restaurants and food options across the country. Users can discover new eateries, read genuine reviews, and engage with a community of fellow food enthusiasts. ",
+            logo: "rateeat.png",
+            link:"",
+            presentation_link:"https://www.youtube.com/watch?v=Z_ump3DCtAA&ab_channel=RateEat",
+            website:"https://rateeat.app/en",
         }
     ];
 
     const interests = ["Anime", "Movies", "Football", "Traveling"]
 
-    console.log(expriences);
   return (
 
-      <div className="w-5/6 m-auto">
 
+
+      <div className="w-5/6 m-auto">
           <div className="flex flex-col-reverse items-center md:flex-row mb-8">
-              <div className="w-4/5">
+              <div className="w-full lg:w-4/5">
                 <p className="text-4xl mb-3.5">About Me</p>
                 <p className="text-4xl mb-3.5">I ❤️ to build things</p>
                 <p className="text-lg font-light">
@@ -124,7 +132,7 @@ export default function Home() {
 
           <p className="font-bold text-xl my-4" id="Projects">Projects</p>
 
-          <div className="flex flex-col  md:flex-row gap-4 mb-4 items-center">
+          <div className="flex flex-col  md:flex-row gap-4 mb-4 items-center ">
               {projects.map((item,index)=>(<ProjectDetail project={item} key={index}/>))}
           </div>
 
